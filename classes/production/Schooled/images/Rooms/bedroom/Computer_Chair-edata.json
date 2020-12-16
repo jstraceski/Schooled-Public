@@ -1,0 +1,52 @@
+{
+    "mass" : 200,
+    "sheet" : "Computer_Chair.png",
+    "images" : {
+        "#base" : [
+            {
+                "image" : {
+                    "x" : 0,
+                    "y" : 0,
+                    "h" : 29,
+                    "w" : 10
+                }
+            }
+        ]
+    },
+    "size" : {
+        "h" : 29,
+        "w" : 10
+    },
+    "lookup" : "Computer_Chair",
+    "etype" : "chair",
+    "areas" : {
+        "#base" : {
+            "ids" : [
+                1
+            ]
+        }
+    },
+    "type" : "edata",
+    "shape_lookup" : [
+        [
+            {
+                "x" : 0,
+                "y" : 23,
+                "color" : [
+                    109,
+                    107,
+                    131,
+                    255
+                ],
+                "cy" : 26.0,
+                "h" : 6,
+                "cx" : 5.0,
+                "w" : 10
+            }
+        ]
+    ],
+    "pos" : {
+        "x" : 5.0,
+        "y" : 26.0
+    }
+}

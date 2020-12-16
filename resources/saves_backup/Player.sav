@@ -1,0 +1,24 @@
+#   image lookup table
+#       0 - front
+#       1 - back
+#       2 - left
+#       3 - right
+#
+#       4 - walk up
+#       5 - walk down
+#       6 - walk left
+#       7 - walk right
+#
+#       8 - sleeping
+
+############################### LOAD FIRST #####################################
+
+player:player()
+<imageData>([player], 0, Player_Up, Player_Down, Player_Left, Player_Right 
+    Player_Walk_Up, Player_Walk_Down, Player_Walk_Left, Player_Walk_Right)
+<imageData>([player], 8, Sleeping_With_Pillow)
+layeredSprite:player_sit_right_layer(("Player_Top_Sit_Right", 1), ("Player_Sit_Right", 0))
+
+<imageData>([player], 9, [player_sit_right_layer])
+
+################################################################################

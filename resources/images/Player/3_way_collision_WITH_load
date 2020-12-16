@@ -1,0 +1,233 @@
+weights, seed, 2.4142137, Vector[x = -0.70710677, y = 0.70710677]
+weights, seed, 2.118034, Vector[x = 0.8944272, y = 0.4472136]
+weights, seed, 2.0680006, Vector[x = 0.9363291, y = 0.35112342]
+MT[
+	entity: seed
+	im: 0.16672587
+	iNorm: Vector[x = 0.0, y = 1.0]
+	oNorm: Vector[x = 0.4362399, y = 0.8998304]
+	eScalar: 1.0
+	nScalar: 1.0
+	divScalar: 1.0
+	zeroNormals: {Vector[x = -0.0, y = -1.0]}
+	zNorm: Vector[x = 0.0, y = 1.0]
+	cIn: null
+	cOut: null
+	children: 
+		MT[
+			entity: e1
+			im: 0.5857864
+			iNorm: Vector[x = 0.70710677, y = 0.70710677]
+			oNorm: Vector[x = 0.0, y = 1.0]
+			eScalar: 1.3360703
+			nScalar: 1.0
+			divScalar: 1.0
+			zeroNormals: {Vector[x = -0.70710677, y = -0.70710677], Vector[x = 1.0, y = -0.0], Vector[x = -0.70710677, y = -0.70710677]}
+			zNorm: Vector[x = 0.0, y = 1.0]
+			cIn: null
+			cOut: null
+			children: 
+				MT[
+					entity: e20
+					im: 1.0
+					iNorm: Vector[x = -0.70710677, y = 0.70710677]
+					oNorm: Vector[x = -0.70710677, y = 0.70710677]
+					eScalar: 0.7071068
+					nScalar: 1.0
+					divScalar: 1.0
+					zeroNormals: {Vector[x = 0.70710677, y = -0.70710677], Vector[x = -0.4472136, y = -0.8944272], Vector[x = -0.35112342, y = -0.9363291], Vector[x = 0.70710677, y = -0.70710677]}
+					zNorm: Vector[x = -0.70710677, y = 0.70710677]
+					cIn: null
+					cOut: null
+					children: {}
+				]
+		]
+		MT[
+			entity: e7
+			im: 0.52786404
+			iNorm: Vector[x = -0.4472136, y = 0.8944272]
+			oNorm: Vector[x = -0.0, y = 1.0]
+			eScalar: 0.6817105
+			nScalar: 1.0
+			divScalar: 1.0
+			zeroNormals: {Vector[x = 0.4472136, y = -0.8944272], Vector[x = -1.0, y = -0.0], Vector[x = 0.4472136, y = -0.8944272]}
+			zNorm: Vector[x = -0.0, y = 1.0]
+			cIn: null
+			cOut: null
+			children: 
+				MT[
+					entity: e20
+					im: 1.0
+					iNorm: Vector[x = 0.4472136, y = 0.8944272]
+					oNorm: Vector[x = 0.4472136, y = 0.8944272]
+					eScalar: 0.8944273
+					nScalar: 1.0
+					divScalar: 1.0
+					zeroNormals: {Vector[x = 0.70710677, y = -0.70710677], Vector[x = -0.4472136, y = -0.8944272], Vector[x = -0.35112342, y = -0.9363291], Vector[x = -0.4472136, y = -0.8944272]}
+					zNorm: Vector[x = 0.4472136, y = 0.8944272]
+					cIn: null
+					cOut: null
+					children: {}
+				]
+		]
+		MT[
+			entity: e21
+			im: 0.5164411
+			iNorm: Vector[x = -0.35112342, y = 0.9363291]
+			oNorm: Vector[x = -0.0, y = 1.0]
+			eScalar: 0.73624045
+			nScalar: 1.0
+			divScalar: 1.0
+			zeroNormals: {Vector[x = 0.35112342, y = -0.9363291], Vector[x = -1.0, y = -0.0], Vector[x = 0.35112342, y = -0.9363291]}
+			zNorm: Vector[x = -0.0, y = 1.0]
+			cIn: null
+			cOut: null
+			children: 
+				MT[
+					entity: e20
+					im: 1.0
+					iNorm: Vector[x = 0.35112342, y = 0.9363291]
+					oNorm: Vector[x = 0.35112342, y = 0.9363291]
+					eScalar: 0.93632925
+					nScalar: 1.0
+					divScalar: 1.0
+					zeroNormals: {Vector[x = 0.70710677, y = -0.70710677], Vector[x = -0.4472136, y = -0.8944272], Vector[x = -0.35112342, y = -0.9363291], Vector[x = -0.35112342, y = -0.9363291]}
+					zNorm: Vector[x = 0.35112342, y = 0.9363291]
+					cIn: null
+					cOut: null
+					children: {}
+				]
+		]
+]
+norm, 0.31622776, 0.2880244, 0.2880244, 0.4820421
+norm, 0.4138029, 0.40704507, 0.40704507, 0.5206006
+n2, e20, Vector[x = -0.70710677, y = 0.70710677], 1.3360703, 0.70710677, 0.70710677, 0.94474435
+norm, 0.9945054, 0.49914506, 0.4991451, 0.6585135
+n2, e20, Vector[x = 0.4472136, y = 0.8944272], 0.6817105, 0.8944272, 0.8944272, 0.6097404
+n2, e20, Vector[x = 0.35112342, y = 0.9363291], 0.73624045, 0.9363291, 0.9363291, 0.68936336
+n2, e1, Vector[x = 0.70710677, y = 0.70710677], 1.0, 0.70710677, 0.70710677, 0.70710677
+norm, 0.31622776, 0.2880244, 0.2880244, 0.4820421
+norm, 0.4138029, 0.40704507, 0.40704507, 0.5206006
+n2, e20, Vector[x = -0.70710677, y = 0.70710677], 1.3360703, 0.70710677, 0.70710677, 0.94474435
+norm, 0.9945054, 0.49914506, 0.4991451, 0.6585135
+n2, e20, Vector[x = 0.4472136, y = 0.8944272], 0.6817105, 0.8944272, 0.8944272, 0.6097404
+n2, e20, Vector[x = 0.35112342, y = 0.9363291], 0.73624045, 0.9363291, 0.9363291, 0.68936336
+n2, e7, Vector[x = -0.4472136, y = 0.8944272], 1.0, 0.8944272, 0.8944272, 0.8944272
+norm, 0.31622776, 0.2880244, 0.2880244, 0.4820421
+norm, 0.4138029, 0.40704507, 0.40704507, 0.5206006
+n2, e20, Vector[x = -0.70710677, y = 0.70710677], 1.3360703, 0.70710677, 0.70710677, 0.94474435
+norm, 0.9945054, 0.49914506, 0.4991451, 0.6585135
+n2, e20, Vector[x = 0.4472136, y = 0.8944272], 0.6817105, 0.8944272, 0.8944272, 0.6097404
+n2, e20, Vector[x = 0.35112342, y = 0.9363291], 0.73624045, 0.9363291, 0.9363291, 0.68936336
+n2, e21, Vector[x = -0.35112342, y = 0.9363291], 1.0, 0.9363291, 0.9363291, 0.9363291
+weights, seed, 1.7679045, Vector[x = -0.70710677, y = 0.70710677]
+weights, seed, 1.6598318, Vector[x = 0.8944272, y = 0.4472136]
+weights, seed, 1.5480431, Vector[x = 0.9363291, y = 0.35112342]
+Vector[x = 4.7624516, y = 10.0], seed
+Vector[x = 0.0, y = 14.762451], e1
+Vector[x = -4.7624516, y = 10.0], e20
+Vector[x = -0.0, y = 7.6187744], e7
+Vector[x = -4.7624516, y = 10.0], e20
+Vector[x = -4.7624516, y = 10.0], e20
+Vector[x = -0.0, y = 8.21408], e21
+Vector[x = -4.7624507, y = 9.999998], e20
+Vector[x = -4.7624516, y = 10.0], e20
+{Manifold[a=seed, b=e1], Manifold[a=seed, b=e7], Manifold[a=seed, b=e21], Manifold[a=e1, b=e3], Manifold[a=e1, b=e20], Manifold[a=e4, b=e9], Manifold[a=e4, b=e10], Manifold[a=e4, b=e11], Manifold[a=e4, b=e12], Manifold[a=e4, b=e13], Manifold[a=e4, b=e14], Manifold[a=e4, b=e15], Manifold[a=e4, b=e16], Manifold[a=e4, b=e17], Manifold[a=e4, b=e18], Manifold[a=e4, b=e19], Manifold[a=e5, b=e7], Manifold[a=e6, b=e11], Manifold[a=e6, b=e16], Manifold[a=e6, b=e17], Manifold[a=e6, b=e18], Manifold[a=e6, b=e19], Manifold[a=e7, b=e20], Manifold[a=e9, b=e11], Manifold[a=e9, b=e12], Manifold[a=e9, b=e19], Manifold[a=e10, b=e11], Manifold[a=e10, b=e12], Manifold[a=e10, b=e19], Manifold[a=e11, b=e12], Manifold[a=e11, b=e13], Manifold[a=e11, b=e14], Manifold[a=e11, b=e15], Manifold[a=e11, b=e16], Manifold[a=e11, b=e17], Manifold[a=e11, b=e18], Manifold[a=e11, b=e19], Manifold[a=e12, b=e13], Manifold[a=e12, b=e14], Manifold[a=e12, b=e15], Manifold[a=e12, b=e16], Manifold[a=e12, b=e17], Manifold[a=e12, b=e18], Manifold[a=e12, b=e19], Manifold[a=e13, b=e19], Manifold[a=e14, b=e19], Manifold[a=e15, b=e19], Manifold[a=e16, b=e19], Manifold[a=e17, b=e19], Manifold[a=e18, b=e19], Manifold[a=e20, b=e21], Manifold[a=e21, b=e22]}
+MT[
+	entity: seed
+	im: 0.20998386
+	iNorm: Vector[x = 0.0, y = 1.0]
+	oNorm: Vector[x = 0.42997384, y = 0.90284145]
+	eScalar: 1.0
+	nScalar: 1.0
+	divScalar: 1.0
+	zeroNormals: {Vector[x = -0.0, y = -1.0], Vector[x = -0.0, y = -1.0]}
+	zNorm: Vector[x = 0.0, y = 1.0]
+	cIn: null
+	cOut: null
+	children: 
+		MT[
+			entity: e1
+			im: 0.7999377
+			iNorm: Vector[x = 0.70710677, y = 0.70710677]
+			oNorm: Vector[x = 0.0, y = 1.0]
+			eScalar: 1.3328153
+			nScalar: 1.0
+			divScalar: 1.0
+			zeroNormals: {Vector[x = -0.70710677, y = -0.70710677], Vector[x = 1.0, y = -0.0], Vector[x = -0.70710677, y = -0.70710677], Vector[x = -0.70710677, y = -0.70710677]}
+			zNorm: Vector[x = 0.0, y = 1.0]
+			cIn: null
+			cOut: null
+			children: 
+				MT[
+					entity: e20
+					im: 1.0
+					iNorm: Vector[x = -0.70710677, y = 0.70710677]
+					oNorm: Vector[x = -0.4299738, y = 0.9028413]
+					eScalar: 0.25009722
+					nScalar: 1.0
+					divScalar: 0.33333334
+					zeroNormals: {Vector[x = 0.70710677, y = -0.70710677], Vector[x = -0.4472136, y = -0.8944272], Vector[x = -0.35112342, y = -0.9363291], Vector[x = 0.70710677, y = -0.70710677], Vector[x = 0.4299738, y = -0.9028413]}
+					zNorm: Vector[x = -0.4299738, y = 0.9028413]
+					cIn: Vector[x = -0.4299738, y = 0.9028413]
+					cOut: null
+					children: {}
+				]
+		]
+		MT[
+			entity: e7
+			im: 0.67358273
+			iNorm: Vector[x = -0.4472136, y = 0.8944272]
+			oNorm: Vector[x = -0.0, y = 1.0]
+			eScalar: 0.6878545
+			nScalar: 1.0
+			divScalar: 1.0
+			zeroNormals: {Vector[x = 0.4472136, y = -0.8944272], Vector[x = -1.0, y = -0.0], Vector[x = 0.4472136, y = -0.8944272], Vector[x = 0.4472136, y = -0.8944272]}
+			zNorm: Vector[x = -0.0, y = 1.0]
+			cIn: null
+			cOut: null
+			children: 
+				MT[
+					entity: e20
+					im: 1.0
+					iNorm: Vector[x = 0.4472136, y = 0.8944272]
+					oNorm: Vector[x = -0.4299738, y = 0.9028413]
+					eScalar: 0.4845987
+					nScalar: 1.0
+					divScalar: 0.33333334
+					zeroNormals: {Vector[x = 0.70710677, y = -0.70710677], Vector[x = -0.4472136, y = -0.8944272], Vector[x = -0.35112342, y = -0.9363291], Vector[x = -0.4472136, y = -0.8944272], Vector[x = 0.4299738, y = -0.9028413]}
+					zNorm: Vector[x = -0.4299738, y = 0.9028413]
+					cIn: Vector[x = -0.4299738, y = 0.9028413]
+					cOut: null
+					children: {}
+				]
+		]
+		MT[
+			entity: e21
+			im: 0.68990356
+			iNorm: Vector[x = -0.35112342, y = 0.9363291]
+			oNorm: Vector[x = -0.0, y = 1.0]
+			eScalar: 0.74160135
+			nScalar: 1.0
+			divScalar: 1.0
+			zeroNormals: {Vector[x = 0.35112342, y = -0.9363291], Vector[x = -1.0, y = -0.0], Vector[x = 0.35112342, y = -0.9363291], Vector[x = 0.35112342, y = -0.9363291]}
+			zNorm: Vector[x = -0.0, y = 1.0]
+			cIn: null
+			cOut: null
+			children: 
+				MT[
+					entity: e20
+					im: 1.0
+					iNorm: Vector[x = 0.35112342, y = 0.9363291]
+					oNorm: Vector[x = -0.4299738, y = 0.9028413]
+					eScalar: 0.44947788
+					nScalar: 1.0
+					divScalar: 0.33333334
+					zeroNormals: {Vector[x = 0.70710677, y = -0.70710677], Vector[x = -0.4472136, y = -0.8944272], Vector[x = -0.35112342, y = -0.9363291], Vector[x = -0.35112342, y = -0.9363291], Vector[x = 0.4299738, y = -0.9028413]}
+					zNorm: Vector[x = -0.4299738, y = 0.9028413]
+					cIn: Vector[x = -0.4299738, y = 0.9028413]
+					cOut: null
+					children: {}
+				]
+		]
+]

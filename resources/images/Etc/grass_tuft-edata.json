@@ -1,0 +1,25 @@
+{
+    "images" : {
+        "#base" : [
+            {
+                "image" : {
+                    "w" : 16,
+                    "x" : 0,
+                    "y" : 0,
+                    "h" : 5
+                }
+            }
+        ]
+    },
+    "sheet" : "grass_tuft.png",
+    "size" : {
+        "w" : 16,
+        "h" : 5
+    },
+    "lookup" : "grass_tuft",
+    "type" : "edata",
+    "pos" : {
+        "y" : 1.5,
+        "x" : 8.0
+    }
+}

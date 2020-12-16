@@ -1,0 +1,68 @@
+{
+  "cmds": [
+    {
+      "lookup": "left_loop",
+      "data": [
+        {
+          "func": "localMove",
+          "data": [
+            {"lookup": "player"},
+            {"lookup": "home_outside_left_enter"},
+            {"lookup": "home_outside_right_exit"}
+          ]
+        }
+      ],
+      "obj": "event"
+    },
+    {
+      "lookup": "right_loop",
+      "data": [
+        {
+          "func": "localMove",
+          "data": [
+            {"lookup": "player"},
+            {"lookup": "home_outside_right_enter"},
+            {"lookup": "home_outside_left_exit"}
+          ]
+        }
+      ],
+      "obj": "event"
+    },
+    {
+      "func": "setEvent",
+      "data": [
+        {"lookup": "home_outside_left_enter"},
+        {"lookup": "left_loop"}
+      ]
+    },
+    {
+      "func": "setEvent",
+      "data": [
+        {"lookup": "home_outside_right_enter"},
+        {"lookup": "right_loop"}
+      ]
+    },
+    {
+      "func": "doorconnect",
+      "data": [
+        {"lookup": "kitchen_outside"},
+        {"lookup": "house_outside"}
+      ]
+    },
+    {
+      "func": "doorexitvector",
+      "data": [
+        {"lookup": "house_outside"},
+        {
+          "data": [0, 5],
+          "obj": "vector"
+        }
+      ]
+    },
+    {
+      "func": "print",
+      "data": ["loaded out"]
+    }
+  ],
+  "type": "save_data"
+}

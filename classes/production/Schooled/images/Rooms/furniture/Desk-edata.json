@@ -1,0 +1,181 @@
+{
+    "shape_lookup" : [
+        [
+            {
+                "color" : [
+                    153,
+                    229,
+                    80,
+                    255
+                ],
+                "w" : 21,
+                "cy" : 31.5,
+                "y" : 26,
+                "x" : 1,
+                "cx" : 11.5,
+                "h" : 11
+            },
+            {
+                "color" : [
+                    91,
+                    110,
+                    225,
+                    255
+                ],
+                "w" : 15,
+                "cy" : 38.0,
+                "y" : 37,
+                "x" : 4,
+                "cx" : 11.5,
+                "h" : 2
+            }
+        ]
+    ],
+    "lookup" : "Desk",
+    "sheet" : "Desk.png",
+    "type" : "edata",
+    "pos" : {
+        "y" : 36.5,
+        "x" : 11.5
+    },
+    "areas" : {
+        "#base" : {
+            "states" : {
+                "Pushed_In" : {
+                    "ids" : [
+                        1
+                    ]
+                },
+                "Pulled_Out" : {
+                    "ids" : []
+                },
+                "Default" : {
+                    "ids" : [
+                        1
+                    ]
+                }
+            }
+        }
+    },
+    "size" : {
+        "w" : 23,
+        "h" : 40
+    },
+    "images" : {
+        "#base" : {
+            "states" : {
+                "Pushed_In" : [
+                    {
+                        "image" : {
+                            "w" : 23,
+                            "y" : 40,
+                            "x" : 23,
+                            "h" : 40
+                        },
+                        "layer_name" : "Chair_Seat",
+                        "local_pos" : {
+                            "y" : 31.5,
+                            "x" : 11.5
+                        }
+                    },
+                    {
+                        "image" : {
+                            "w" : 23,
+                            "y" : 80,
+                            "x" : 0,
+                            "h" : 40
+                        },
+                        "layer_name" : "Desk",
+                        "local_pos" : {
+                            "y" : 32.5,
+                            "x" : 11.5
+                        }
+                    },
+                    {
+                        "image" : {
+                            "w" : 23,
+                            "y" : 80,
+                            "x" : 23,
+                            "h" : 40
+                        },
+                        "layer_name" : "Chair_Back",
+                        "local_pos" : {
+                            "y" : 38.5,
+                            "x" : 11.5
+                        }
+                    }
+                ],
+                "Pulled_Out" : [
+                    {
+                        "image" : {
+                            "w" : 23,
+                            "y" : 120,
+                            "x" : 0,
+                            "h" : 40
+                        },
+                        "layer_name" : "Chair_Seat"
+                    },
+                    {
+                        "image" : {
+                            "w" : 23,
+                            "y" : 120,
+                            "x" : 23,
+                            "h" : 40
+                        },
+                        "layer_name" : "Desk"
+                    },
+                    {
+                        "image" : {
+                            "w" : 23,
+                            "y" : 160,
+                            "x" : 0,
+                            "h" : 40
+                        },
+                        "layer_name" : "Chair_Back"
+                    }
+                ],
+                "Default" : [
+                    {
+                        "image" : {
+                            "w" : 23,
+                            "y" : 0,
+                            "x" : 0,
+                            "h" : 40
+                        },
+                        "layer_name" : "Chair_Seat",
+                        "local_pos" : {
+                            "y" : 31.5,
+                            "x" : 11.5
+                        }
+                    },
+                    {
+                        "image" : {
+                            "w" : 23,
+                            "y" : 0,
+                            "x" : 23,
+                            "h" : 40
+                        },
+                        "layer_name" : "Desk",
+                        "local_pos" : {
+                            "y" : 32.5,
+                            "x" : 11.5
+                        }
+                    },
+                    {
+                        "image" : {
+                            "w" : 23,
+                            "y" : 40,
+                            "x" : 0,
+                            "h" : 40
+                        },
+                        "layer_name" : "Chair_Back",
+                        "local_pos" : {
+                            "y" : 38.5,
+                            "x" : 11.5
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

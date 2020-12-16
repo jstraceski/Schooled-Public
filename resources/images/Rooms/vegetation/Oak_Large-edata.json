@@ -1,0 +1,46 @@
+{
+    "sheet" : "Oak_Large.png",
+    "lookup" : "Oak_Large",
+    "areas" : {
+        "#base" : {
+            "ids" : [
+                1
+            ]
+        }
+    },
+    "pos" : {
+        "x" : 46.0,
+        "y" : 91.0
+    },
+    "shape_lookup" : [
+        [
+            {
+                "cx" : 46.0,
+                "h" : 10,
+                "y" : 86,
+                "x" : 28,
+                "w" : 36,
+                "cy" : 91.0,
+                "color" : [
+                    0,
+                    0,
+                    0,
+                    255
+                ]
+            }
+        ]
+    ],
+    "images" : {
+        "#base" : [
+            {
+                "image" : {
+                    "y" : 0,
+                    "x" : 0,
+                    "w" : 95,
+                    "h" : 108
+                }
+            }
+        ]
+    },
+    "type" : "edata"
+}

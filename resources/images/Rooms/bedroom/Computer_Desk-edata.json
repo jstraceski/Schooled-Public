@@ -1,0 +1,51 @@
+{
+    "images" : {
+        "#base" : [
+            {
+                "layer_name" : "Desk_Group",
+                "image" : {
+                    "w" : 21,
+                    "y" : 0,
+                    "x" : 0,
+                    "h" : 49
+                }
+            }
+        ]
+    },
+    "sheet" : "Computer_Desk.png",
+    "lookup" : "Computer_Desk",
+    "areas" : {
+        "#base" : {
+            "ids" : [
+                1
+            ]
+        }
+    },
+    "size" : {
+        "w" : 21,
+        "h" : 49
+    },
+    "shape_lookup" : [
+        [
+            {
+                "color" : [
+                    243,
+                    255,
+                    0,
+                    255
+                ],
+                "w" : 21,
+                "cy" : 33.0,
+                "y" : 17,
+                "x" : 0,
+                "cx" : 10.5,
+                "h" : 32
+            }
+        ]
+    ],
+    "pos" : {
+        "y" : 44.5,
+        "x" : 10.5
+    },
+    "type" : "edata"
+}

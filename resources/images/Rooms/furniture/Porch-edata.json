@@ -1,0 +1,21 @@
+{
+    "sheet" : "Porch.png",
+    "type" : "edata",
+    "images" : {
+        "#base" : [
+            {
+                "image" : {
+                    "y" : 0,
+                    "w" : 175,
+                    "h" : 86,
+                    "x" : 0
+                }
+            }
+        ]
+    },
+    "lookup" : "Porch",
+    "pos" : {
+        "y" : 85.5,
+        "x" : 87.5
+    }
+}

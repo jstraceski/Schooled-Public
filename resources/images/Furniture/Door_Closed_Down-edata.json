@@ -1,0 +1,51 @@
+{
+    "images" : {
+        "#base" : [
+            {
+                "image" : {
+                    "y" : 0,
+                    "w" : 25,
+                    "x" : 0,
+                    "h" : 39
+                }
+            }
+        ]
+    },
+    "sheet" : "Door_Closed_Down.png",
+    "pos" : {
+        "y" : 37.5,
+        "x" : 12.5
+    },
+    "areas" : {
+        "#base" : {
+            "ids" : [
+                1
+            ]
+        }
+    },
+    "shape_lookup" : [
+        [
+            {
+                "cx" : 12.5,
+                "y" : 36,
+                "cy" : 37.5,
+                "w" : 25,
+                "x" : 0,
+                "color" : [
+                    251,
+                    242,
+                    54,
+                    255
+                ],
+                "h" : 3
+            }
+        ]
+    ],
+    "etype" : "door",
+    "type" : "edata",
+    "lookup" : "Door_Closed_Down",
+    "size" : {
+        "w" : 25,
+        "h" : 39
+    }
+}

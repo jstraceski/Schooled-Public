@@ -1,0 +1,267 @@
+{
+  "cmds": [
+    {
+      "lookup": "testArea",
+      "data": [],
+      "obj": "room"
+    },
+    {
+      "func": "sprite",
+      "data": [
+        {"lookup": "testArea"},
+        "Map_School"
+      ]
+    },
+    {
+      "func": "loadroom",
+      "data": [
+        {"lookup": "testArea"}
+      ]
+    },
+    {
+      "data": [
+        [30.5, 72.5],
+        {
+          "data": [14, 6],
+          "obj": "polygon"
+        },
+        10
+      ],
+      "obj": "crate"
+    },
+    {
+      "lookup": "pshape",
+      "data": [
+        [3.5, -9],
+        [-9, 3.5],
+        [3.5, 3.5]
+      ],
+      "obj": "polygon"
+    },
+    {
+      "lookup": "fpshape",
+      "data": [
+        {"lookup": "pshape"}
+      ],
+      "obj": "clone"
+    },
+    {
+      "func": "flipPolygonHorizontal",
+      "data": [
+        {"lookup": "fpshape"}
+      ]
+    },
+    {
+      "lookup": "ps",
+      "data": [
+        [
+          [16, 0],
+          [7, 39],
+        ],
+        [
+          [-16, 0],
+          [7, 39],
+        ],
+        [
+          [0, -16],
+          [39, 7],
+        ],
+        [
+          [15, 16],
+          {"lookup": "pshape"}
+        ],
+        [
+          [-15, 16],
+          {"lookup": "fpshape"}
+        ]
+      ],
+      "obj": "multiShape"
+    },
+    {
+      "data": [
+        [125, 125],
+        {"lookup": "pshape"},
+        10
+      ],
+      "obj": "entity"
+    },
+    {
+      "lookup": "horseshoe",
+      "data": [
+        [125, 150],
+        {"lookup": "ps"},
+        10
+      ],
+      "obj": "entity"
+    },
+    {
+      "lookup": "layered",
+      "data": [
+        {
+          "data": ["Thing_Back", -1],
+          "obj": "s"
+        },
+        {
+          "data": ["Thing_Front", 0],
+          "obj": "s"
+        }
+      ],
+      "obj": "layeredSprite"
+    },
+    {
+      "func": "resetBaseScale",
+      "data": [
+        {"lookup": "layered"},
+        2
+      ]
+    },
+    {
+      "func": "sprite",
+      "data": [
+        {"lookup": "horseshoe"},
+        {"lookup": "layered"}
+      ]
+    },
+    {
+      "lookup": "dora",
+      "data": [
+        [50, 200],
+        {
+          "data": [5, 15],
+          "obj": "polygon"
+        }
+      ],
+      "obj": "door"
+    },
+    {
+      "func": "sprite",
+      "data": [
+        {"lookup": "dora"},
+        "Door_Closed_Right"
+      ]
+    },
+    {
+      "func": "spriteShift",
+      "data": [
+        {"lookup": "dora"},
+        [2, -22.5]
+      ]
+    },
+    {
+      "func": "doorexitvector",
+      "data": [
+        {"lookup": "dora"},
+        [28, 0]
+      ]
+    },
+    {
+      "lookup": "boomVector",
+      "data": [0, 0],
+      "obj": "v"
+    },
+    {
+      "lookup": "displayBoom",
+      "data": [
+        {
+          "func": "sendDlg",
+          "data": ["BOOM!!"]
+        }
+      ],
+      "obj": "event"
+    },
+    {
+      "lookup": "nameBoomVector",
+      "data": [
+        {
+          "data": [
+            {
+              "lookup": "boomVector",
+              "data": [
+                {"lookup": "2"},
+                {"lookup": "1"}
+              ],
+              "obj": "vector"
+            }
+          ],
+          "obj": "cmd"
+        }
+      ],
+      "obj": "event"
+    },
+    {
+      "lookup": "normBoomVector",
+      "data": [
+        {
+          "func": "normalize",
+          "data": [
+            {"lookup": "boomVector"}
+          ]
+        }
+      ],
+      "obj": "event"
+    },
+    {
+      "lookup": "scaleBoomVector",
+      "data": [
+        {
+          "func": "scale",
+          "data": [
+            {"lookup": "boomVector"},
+            10
+          ]
+        }
+      ],
+      "obj": "event"
+    },
+    {
+      "lookup": "moveReceiver",
+      "data": [
+        {
+          "func": "setVel",
+          "data": [
+            {"lookup": "1"},
+            {"lookup": "boomVector"}
+          ]
+        }
+      ],
+      "obj": "event"
+    },
+    {
+      "lookup": "boomEvent",
+      "data": [
+        {"lookup": "displayBoom"},
+        {"lookup": "nameBoomVector"},
+        {"lookup": "normBoomVector"},
+        {"lookup": "scaleBoomVector"},
+        {"lookup": "moveReceiver"}
+      ],
+      "obj": "event"
+    },
+    {
+      "lookup": "boomer",
+      "data": [
+        [125, 25],
+        {
+          "data": [4.5],
+          "obj": "circle"
+        },
+        10
+      ],
+      "obj": "item"
+    },
+    {
+      "func": "setPickupEvent",
+      "data": [
+        {"lookup": "boomer"},
+        {"lookup": "boomEvent"}
+      ]
+    },
+    {
+      "func": "addEntity",
+      "data": [
+        {"lookup": "boomer"}
+      ]
+    }
+  ],
+  "type": "save_data"
+}

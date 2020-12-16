@@ -1,0 +1,991 @@
+{
+  "cmds": [
+    {
+      "lookup": "up",
+      "data": [
+        0,
+        1
+      ],
+      "obj": "vector"
+    },
+    {
+      "lookup": "down",
+      "data": [
+        0,
+        -1
+      ],
+      "obj": "vector"
+    },
+    {
+      "lookup": "right",
+      "data": [
+        1,
+        0
+      ],
+      "obj": "vector"
+    },
+    {
+      "lookup": "left",
+      "data": [
+        -1,
+        0
+      ],
+      "obj": "vector"
+    },
+    {
+      "lookup": "door_closed_bottom_up",
+      "data": [
+        {
+          "data": [
+            0,
+            0
+          ],
+          "obj": "vector"
+        },
+        {
+          "data": [
+            1,
+            1
+          ],
+          "obj": "polygon"
+        }
+      ],
+      "obj": "door"
+    },
+    {
+      "func": "loadFile",
+      "data": ["resources/saves/edata.json"]
+    },
+    {
+      "func": "loadFile",
+      "data": ["resources/saves/Test_Room.json"]
+    },
+    {
+      "func": "doorexitvector",
+      "data": [
+        {"lookup": "school_exit"},
+        {
+          "data": [
+            0,
+            -5
+          ],
+          "obj": "vector"
+        }
+      ]
+    },
+    {
+      "func": "doorexitvector",
+      "data": [
+        {"lookup": "school_door_outside"},
+        {
+          "data": [
+            0,
+            5
+          ],
+          "obj": "vector"
+        }
+      ]
+    },
+    {
+      "func": "doorconnect",
+      "data": [
+        {"lookup": "school_door_outside"},
+        {"lookup": "school_exit"}
+      ]
+    },
+    {
+      "lookup": "sEnter",
+      "data": [true],
+      "obj": "bool"
+    },
+    {
+      "lookup": "disolve1",
+      "data": [
+        0,
+        {
+          "func": "hold",
+          "data": [true]
+        }
+      ],
+      "obj": "event"
+    },
+    {
+      "lookup": "disolve2",
+      "data": [
+        0,
+        {
+          "func": "setGameAlpha",
+          "data": [
+            0,
+            1,
+            5
+          ]
+        }
+      ],
+      "obj": "event"
+    },
+    {
+      "lookup": "disolve3",
+      "data": [
+        5,
+        {
+          "func": "setGameAlpha",
+          "data": [1]
+        }
+      ],
+      "obj": "event"
+    },
+    {
+      "lookup": "disolve4",
+      "data": [
+        5,
+        {
+          "func": "hold",
+          "data": [false]
+        }
+      ],
+      "obj": "event"
+    },
+    {
+      "lookup": "disolve",
+      "data": [
+        {"lookup": "disolve1"},
+        {"lookup": "disolve2"},
+        {"lookup": "disolve3"},
+        {"lookup": "disolve4"}
+      ],
+      "obj": "event"
+    },
+    {
+      "func": "setEvent",
+      "data": [
+        {"lookup": "school_door_outside"},
+        {
+          "data": [
+            {"lookup": "sEnter"},
+            true,
+            {
+              "data": [
+                {"lookup": "disolve"},
+                {
+                  "data": [{
+                    "lookup": "sEnter",
+                    "data": [false],
+                    "obj": "bool"
+                  }],
+                  "obj": "cmd"
+                }
+              ],
+              "obj": "event"
+            }
+          ],
+          "obj": "ifcmd"
+        }
+      ]
+    },
+    {
+      "lookup": "closet",
+      "data": [],
+      "obj": "room"
+    },
+    {
+      "func": "sprite",
+      "data": [
+        {"lookup": "closet"},
+        "Closet"
+      ]
+    },
+    {
+      "func": "loadroom",
+      "data": [{"lookup": "closet"}]
+    },
+    {
+      "lookup": "dorb",
+      "data": [
+        {
+          "data": [
+            177.5,
+            102.5
+          ],
+          "obj": "vector"
+        },
+        {
+          "data": [
+            5,
+            15
+          ],
+          "obj": "polygon"
+        }
+      ],
+      "obj": "door"
+    },
+    {
+      "func": "sprite",
+      "data": [
+        {"lookup": "dorb"},
+        "Door_Closed_Left"
+      ]
+    },
+    {
+      "func": "spriteshift",
+      "data": [
+        {"lookup": "dorb"},
+        {
+          "data": [
+            -2,
+            -22.5
+          ],
+          "obj": "vector"
+        }
+      ]
+    },
+    {
+      "func": "doorexitvector",
+      "data": [
+        {"lookup": "dorb"},
+        {
+          "data": [
+            -14,
+            0
+          ],
+          "obj": "vector"
+        }
+      ]
+    },
+    {
+      "lookup": "dord",
+      "data": [
+        {
+          "data": [
+            2.5,
+            102.5
+          ],
+          "obj": "vector"
+        },
+        {
+          "data": [
+            5,
+            15
+          ],
+          "obj": "polygon"
+        }
+      ],
+      "obj": "door"
+    },
+    {
+      "func": "sprite",
+      "data": [
+        {"lookup": "dord"},
+        "Door_Closed_Right"
+      ]
+    },
+    {
+      "func": "spriteshift",
+      "data": [
+        {"lookup": "dord"},
+        {
+          "data": [
+            2,
+            -22.5
+          ],
+          "obj": "vector"
+        }
+      ]
+    },
+    {
+      "func": "doorexitvector",
+      "data": [
+        {"lookup": "dord"},
+        {
+          "data": [
+            14,
+            0
+          ],
+          "obj": "vector"
+        }
+      ]
+    },
+    {
+      "func": "doorconnect",
+      "data": [
+        {"lookup": "dora"},
+        {"lookup": "dorb"}
+      ]
+    },
+    {
+      "func": "genwallsfromsprite",
+      "data": [
+        {"lookup": "closet"},
+        {
+          "data": [
+            5,
+            55
+          ],
+          "obj": "vector"
+        }
+      ]
+    },
+    {
+      "lookup": "c1",
+      "data": [
+        {
+          "data": [
+            30.5,
+            72.5
+          ],
+          "obj": "vector"
+        },
+        {
+          "data": [
+            14,
+            6
+          ],
+          "obj": "polygon"
+        },
+        1
+      ],
+      "obj": "crate"
+    },
+    {
+      "lookup": "c2",
+      "data": [
+        {
+          "data": [
+            33,
+            80
+          ],
+          "obj": "vector"
+        },
+        {
+          "data": [
+            14,
+            6
+          ],
+          "obj": "polygon"
+        },
+        1
+      ],
+      "obj": "crate"
+    },
+    {
+      "lookup": "c3",
+      "data": [
+        {
+          "data": [
+            31.5,
+            87.5
+          ],
+          "obj": "vector"
+        },
+        {
+          "data": [
+            14,
+            6
+          ],
+          "obj": "polygon"
+        },
+        1
+      ],
+      "obj": "crate"
+    },
+    {
+      "lookup": "c4",
+      "data": [
+        {
+          "data": [
+            27.5,
+            95
+          ],
+          "obj": "vector"
+        },
+        {
+          "data": [
+            14,
+            6
+          ],
+          "obj": "polygon"
+        },
+        1
+      ],
+      "obj": "crate"
+    },
+    {
+      "lookup": "c5",
+      "data": [
+        {
+          "data": [
+            14,
+            75
+          ],
+          "obj": "vector"
+        },
+        {
+          "data": [
+            14,
+            6
+          ],
+          "obj": "polygon"
+        },
+        1
+      ],
+      "obj": "crate"
+    },
+    {
+      "lookup": "c6",
+      "data": [
+        {
+          "data": [
+            11.5,
+            82.5
+          ],
+          "obj": "vector"
+        },
+        {
+          "data": [
+            14,
+            6
+          ],
+          "obj": "polygon"
+        },
+        1
+      ],
+      "obj": "crate"
+    },
+    {
+      "lookup": "c7",
+      "data": [
+        {
+          "data": [
+            14.5,
+            90
+          ],
+          "obj": "vector"
+        },
+        {
+          "data": [
+            14,
+            6
+          ],
+          "obj": "polygon"
+        },
+        1
+      ],
+      "obj": "crate"
+    },
+    {
+      "lookup": "c8",
+      "data": [
+        {
+          "data": [
+            13,
+            97.5
+          ],
+          "obj": "vector"
+        },
+        {
+          "data": [
+            14,
+            6
+          ],
+          "obj": "polygon"
+        },
+        1
+      ],
+      "obj": "crate"
+    },
+    {
+      "lookup": "c9",
+      "data": [
+        {
+          "data": [
+            55,
+            80
+          ],
+          "obj": "vector"
+        },
+        {
+          "data": [
+            14,
+            6
+          ],
+          "obj": "polygon"
+        },
+        1
+      ],
+      "obj": "crate"
+    },
+    {
+      "lookup": "c10",
+      "data": [
+        {
+          "data": [
+            52.5,
+            82.5
+          ],
+          "obj": "vector"
+        },
+        {
+          "data": [
+            14,
+            6
+          ],
+          "obj": "polygon"
+        },
+        1
+      ],
+      "obj": "crate"
+    },
+    {
+      "lookup": "c11",
+      "data": [
+        {
+          "data": [
+            59.5,
+            82.5
+          ],
+          "obj": "vector"
+        },
+        {
+          "data": [
+            14,
+            12
+          ],
+          "obj": "polygon"
+        },
+        2
+      ],
+      "obj": "crate"
+    },
+    {
+      "func": "loadFile",
+      "data": ["resources/saves/loadKitchen.json"]
+    },
+    {
+      "func": "loadroom",
+      "data": [{"lookup": "bedroom"}]
+    },
+    {
+      "lookup": "phil",
+      "data": [
+        {
+          "data": [
+            100,
+            85.5
+          ],
+          "obj": "vector"
+        },
+        {
+          "data": [5],
+          "obj": "circle"
+        },
+        20
+      ],
+      "obj": "npc"
+    },
+    {
+      "func": "setMasterBaseScale",
+      "data": [
+        "Phil",
+        1.5
+      ]
+    },
+    {
+      "func": "setName",
+      "data": [
+        {"lookup": "phil"},
+        "Willard The Scarecrow"
+      ]
+    },
+    {
+      "func": "sprite",
+      "data": [
+        {"lookup": "phil"},
+        "Phil",
+        0,
+        {
+          "data": [
+            0,
+            -12
+          ],
+          "obj": "vector"
+        }
+      ]
+    },
+    {
+      "lookup": "moveSpeak",
+      "data": [{
+        "func": "setVel",
+        "data": [
+          {"lookup": "2"},
+          {
+            "data": [
+              0,
+              -2
+            ],
+            "obj": "vector"
+          }
+        ]
+      }],
+      "obj": "event"
+    },
+    {
+      "lookup": "moveList",
+      "data": [{
+        "func": "setVel",
+        "data": [
+          {"lookup": "1"},
+          {
+            "data": [
+              0,
+              2
+            ],
+            "obj": "vector"
+          }
+        ]
+      }],
+      "obj": "event"
+    },
+    {
+      "lookup": "godTalk",
+      "data": [{
+        "func": "sendDlg",
+        "data": ["What!? I never did that crap!"]
+      }],
+      "obj": "event"
+    },
+    {
+      "lookup": "wth",
+      "data": [{
+        "func": "sendDlg",
+        "data": [
+          "Ow! What the heck?!",
+          {"lookup": "1"}
+        ]
+      }],
+      "obj": "event"
+    },
+    {
+      "lookup": "godTalkPush",
+      "data": [
+        {"lookup": "moveList"},
+        {"lookup": "godTalk"}
+      ],
+      "obj": "event"
+    },
+    {
+      "lookup": "entityTalkPush",
+      "data": [
+        {"lookup": "moveSpeak"},
+        {"lookup": "wth"}
+      ],
+      "obj": "event"
+    },
+    {
+      "lookup": "philchoice",
+      "data": [
+        "Um... What did it do?",
+        {
+          "data": ["Pushed Willard"],
+          "obj": "msg",
+          "after": {"lookup": "entityTalkPush"}
+        },
+        {
+          "data": ["Spoke to God"],
+          "obj": "msg",
+          "after": {"lookup": "godTalkPush"}
+        }
+      ],
+      "obj": "msg"
+    },
+    {
+      "lookup": "phildialogue",
+      "data": [
+        {
+          "data": [
+            "Once there was a thing!",
+            {"lookup": "moveList"}
+          ],
+          "obj": "msg"
+        },
+        "That thing did some stuff!",
+        {"lookup": "philchoice"},
+        "Whatever. And it was cool... \n\tThe thing... Not the stuff it did.",
+        "The end."
+      ],
+      "obj": "dlg"
+    },
+    {
+      "func": "addDialogue",
+      "data": [
+        {"lookup": "phil"},
+        {"lookup": "phildialogue"}
+      ]
+    },
+    {
+      "func": "addDialogue",
+      "data": [
+        {"lookup": "phil"},
+        "Go away plz."
+      ]
+    },
+    {
+      "func": "repeatLast",
+      "data": [{"lookup": "phil"}]
+    },
+    {
+      "func": "loadroom",
+      "data": [{"lookup": "outside"}]
+    },
+    {
+      "func": "addRoom",
+      "data": [
+        {"lookup": "home_end"},
+        {
+          "data": [
+            1,
+            0
+          ],
+          "obj": "v"
+        }
+      ]
+    },
+    {
+      "func": "addRoom",
+      "data": [
+        {"lookup": "forest"},
+        {
+          "data": [
+            1,
+            0
+          ],
+          "obj": "v"
+        }
+      ]
+    },
+    {
+      "func": "addRoom",
+      "data": [
+        {"lookup": "forest"},
+        {
+          "data": [
+            1,
+            0
+          ],
+          "obj": "v"
+        }
+      ]
+    },
+    {
+      "func": "addRoom",
+      "data": [
+        {"lookup": "forest_end"},
+        {
+          "data": [
+            1,
+            0
+          ],
+          "obj": "v"
+        },
+        {
+          "data": [
+            0,
+            -85
+          ],
+          "obj": "v"
+        }
+      ]
+    },
+    {
+      "func": "addRoom",
+      "data": [
+        {"lookup": "school"},
+        {
+          "data": [
+            1,
+            0
+          ],
+          "obj": "v"
+        },
+        {
+          "data": [
+            0,
+            -85
+          ],
+          "obj": "v"
+        }
+      ]
+    },
+    {
+      "func": "loadFile",
+      "data": ["resources/saves/loadBus.json"]
+    },
+    {
+      "func": "loadFile",
+      "data": ["resources/saves/loadBedroom.json"]
+    },
+    {
+      "func": "loadFile",
+      "data": ["resources/saves/loadOutside.json"]
+    },
+    {
+      "func": "loadFile",
+      "data": ["resources/saves/loadIntro.json"]
+    },
+    {
+      "func": "loadButtonConstants",
+      "data": []
+    },
+    {
+      "func": "keyConstants",
+      "data": [
+        [
+          "NON_ALPHA",
+          [
+            256,
+            290,
+            291,
+            292,
+            293,
+            294,
+            295,
+            296,
+            297,
+            298,
+            299,
+            300,
+            301,
+            283,
+            260,
+            261,
+            268,
+            269,
+            266,
+            267,
+            282,
+            335,
+            257,
+            344,
+            345,
+            348,
+            346,
+            342,
+            341,
+            340,
+            280,
+            258,
+            343,
+            259,
+            263,
+            264,
+            262,
+            265
+          ]
+        ],
+        [
+          "CONTROL",
+          [
+            "LEFT_CONTROL",
+            "RIGHT_CONTROL"
+          ]
+        ],
+        [
+          "SHIFT",
+          [
+            "LEFT_SHIFT",
+            "RIGHT_SHIFT"
+          ]
+        ]
+      ]
+    },
+    {
+      "func": "gameKeySettings",
+      "data": [
+        [
+          "up",
+          [
+            "W",
+            "UP"
+          ]
+        ],
+        [
+          "down",
+          [
+            "S",
+            "DOWN"
+          ]
+        ],
+        [
+          "left",
+          [
+            "A",
+            "LEFT"
+          ]
+        ],
+        [
+          "right",
+          [
+            "D",
+            "RIGHT"
+          ]
+        ],
+        [
+          "action",
+          "space"
+        ],
+        [
+          "interact",
+          "F"
+        ],
+        [
+          "debug",
+          "E"
+        ],
+        [
+          "debug2",
+          "X"
+        ],
+        [
+          "sprint",
+          "LEFT_SHIFT"
+        ],
+        [
+          "exit",
+          "escape"
+        ],
+        [
+          "debug_switch",
+          "F2"
+        ],
+        [
+          "reload_resources",
+          "F3"
+        ],
+        [
+          "reload_game",
+          "F4"
+        ],
+        [
+          "left_click",
+          "MOUSE_BUTTON_1"
+        ],
+        [
+          "right_click",
+          "MOUSE_BUTTON_2"
+        ],
+        [
+          "middle_click",
+          "MOUSE_BUTTON_3"
+        ],
+        [
+          "debug_step_toggle",
+          "O"
+        ],
+        [
+          "debug_step",
+          "P"
+        ]
+      ]
+    }
+  ],
+  "type": "save_data"
+}

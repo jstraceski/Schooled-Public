@@ -1,0 +1,46 @@
+{
+    "sheet" : "Fence_Left.png",
+    "type" : "edata",
+    "images" : {
+        "#base" : [
+            {
+                "image" : {
+                    "y" : 0,
+                    "w" : 142,
+                    "h" : 21,
+                    "x" : 0
+                }
+            }
+        ]
+    },
+    "lookup" : "Fence_Left",
+    "shape_lookup" : [
+        [
+            {
+                "y" : 17,
+                "cx" : 71.0,
+                "w" : 140,
+                "h" : 3,
+                "color" : [
+                    0,
+                    0,
+                    0,
+                    255
+                ],
+                "cy" : 18.5,
+                "x" : 1
+            }
+        ]
+    ],
+    "pos" : {
+        "y" : 18.5,
+        "x" : 71.0
+    },
+    "areas" : {
+        "#base" : {
+            "ids" : [
+                1
+            ]
+        }
+    }
+}

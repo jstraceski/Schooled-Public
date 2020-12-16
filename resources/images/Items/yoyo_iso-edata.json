@@ -1,0 +1,106 @@
+{
+    "type" : "edata",
+    "areas" : {
+        "#base" : {
+            "ids" : [
+                1
+            ]
+        }
+    },
+    "sheet" : "yoyo_iso.png",
+    "pos" : {
+        "y" : 6.0,
+        "x" : 6.5
+    },
+    "shape_lookup" : [
+        [
+            {
+                "y" : 3,
+                "x" : 2,
+                "cy" : 6.0,
+                "cx" : 6.5,
+                "color" : [
+                    251,
+                    242,
+                    54,
+                    255
+                ],
+                "w" : 9,
+                "h" : 6
+            }
+        ]
+    ],
+    "size" : {
+        "w" : 13,
+        "h" : 13
+    },
+    "lookup" : "yoyo_iso",
+    "etype" : "yoyo",
+    "images" : {
+        "#base" : [
+            {
+                "image" : {
+                    "y" : 26,
+                    "h" : 13,
+                    "w" : 13,
+                    "x" : 0
+                },
+                "layer_name" : "y_top",
+                "local_layer": 2
+            },
+            {
+                "image" : {
+                    "y" : 0,
+                    "h" : 13,
+                    "w" : 13,
+                    "x" : 0
+                },
+                "layer_name" : "y_bottom",
+                "local_layer": 1
+            },
+            {
+                "image" : {
+                    "y" : 13,
+                    "h" : 13,
+                    "w" : 13,
+                    "x" : 0
+                },
+                "layer_name" : "y_shadow",
+                "local_layer": 0
+            }
+        ],
+        "top" : [
+            {
+                "image" : {
+                    "y" : 26,
+                    "h" : 13,
+                    "w" : 13,
+                    "x" : 0
+                },
+                "layer_name" : "y_top"
+            }
+        ],
+        "bottom" : [
+            {
+                "image" : {
+                    "y" : 0,
+                    "h" : 13,
+                    "w" : 13,
+                    "x" : 0
+                },
+                "layer_name" : "y_bottom"
+            }
+        ],
+        "shadow" : [
+            {
+                "image" : {
+                    "y" : 13,
+                    "h" : 13,
+                    "w" : 13,
+                    "x" : 0
+                },
+                "layer_name" : "y_shadow"
+            }
+        ]
+    }
+}
