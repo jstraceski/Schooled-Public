@@ -1,1 +1,0 @@
-find . -name '*.java' | xargs wc -l | sed "s/\([ ]*\)\([0-9]\+\)[\ ,\.,A-Z,a-z,/]\+\/\(\w*\)\.java/\2 \3/"
