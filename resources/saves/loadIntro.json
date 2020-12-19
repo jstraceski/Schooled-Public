@@ -97,7 +97,7 @@
     },
     {
       "func": "nomenu",
-      "data": [true]
+      "data": [false]
     },
     {
       "func": "startEvent",
@@ -142,7 +142,7 @@
       "func": "addChild",
       "data": [
         {"lookup": "bedroom_bed"},
-        {"lookup": "player_"}
+        {"lookup": "player"}
       ]
     },
     {
