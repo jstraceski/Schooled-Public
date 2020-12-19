@@ -1177,7 +1177,7 @@ public class JsonLoader {
         if (isKey(sub_key, "absolute")) {
           absolute = (Boolean) input;
         } else if (isKey(sub_key, "noclone")) {
-          cloneEntities = (Boolean) input;
+          cloneEntities = !((Boolean) input);
         }
       }
 

@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.ByteBuffer;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -12,7 +13,10 @@ import java.util.HashMap;
 import javax.swing.JFileChooser;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.lwjgl.PointerBuffer;
 import org.lwjgl.glfw.GLFW;
+import org.lwjgl.system.MemoryStack;
+import org.lwjgl.util.tinyfd.TinyFileDialogs;
 import schooled.Game;
 import schooled.Window;
 import schooled.datatypes.Tuple;
@@ -53,14 +57,8 @@ public class JSONEditor {
     window = new Window();
     window.init(null);
 
-    final JFileChooser fc = new JFileChooser();
-    String p1 = "C:/Users/Joe/Documents/GitHub/Schooled/resources/saves/Data.json";
-
     menuTop = new Menu(window);
     menuBottom = new Menu(window);
-
-
-
 
     button = new MenuButton((Game) null);
     button.setPos(new Vector(10, 30));
@@ -68,13 +66,16 @@ public class JSONEditor {
     button.setOrigin(Origin.BOTTOM_LEFT);
     button.setBackgroundColor(Color.LIGHT_GRAY);
     button.setButtonEvent(new AsyncEvent(() -> {
-      int returnVal = fc.showOpenDialog(null);
-
-      if (returnVal == JFileChooser.APPROVE_OPTION) {
-        File file = fc.getSelectedFile();
+      MemoryStack stack = MemoryStack.stackPush();
+      PointerBuffer filters = stack.mallocPointer(1);
+      filters.put(stack.UTF8("*.json"));
+      filters.flip();
+      String result = TinyFileDialogs.tinyfd_openFileDialog("Choose Data File", "resources/saves/", filters, null, false);
+      if (result != null && !result.isEmpty()) {
+        File file = new File(result);
         fileBox.setText(file.getAbsolutePath());
         if (file.getName().contains(".json")) {
-          Path nPath = Paths.get(file.getAbsolutePath());
+          nPath = Paths.get(file.getAbsolutePath());
           fileData = new JSONObject(new String(Files.readAllBytes(nPath)));
           modified = true;
         }
@@ -91,8 +92,8 @@ public class JSONEditor {
     }));
 
 
-    nPath = Paths.get(p1);
-    fileData = new JSONObject(new String(Files.readAllBytes(nPath)));
+    nPath = null;
+    fileData = null;
     modified = true;
 
     fileBox = new TextArea((Game) null);
@@ -148,6 +149,10 @@ public class JSONEditor {
   Vector pos = new Vector(20, 30);
 
   public void generateJSONDisplay(JSONObject total) {
+    if (total == null) {
+      return;
+    }
+
     if (!total.optString("type", "").equals("save_data")) {
       return;
     }

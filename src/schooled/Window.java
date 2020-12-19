@@ -327,6 +327,7 @@ public class Window {
     DEFAULT_GRAPHICS_CONTEXT = new GLGraphicsContext(DEFAULT_FONT_CONTEXT, fboData, fboData2);
 
     cursor = new EntityArea(g, new Circle(1.0f), null);
+    cursor.setFunc(cursor::addInteraction);
     cursor.setCollides(false);
     cursor.setInteractAll(true);
 

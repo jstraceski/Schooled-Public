@@ -83,6 +83,7 @@ public class Game implements Runnable {
   public static Sprite debugSprite;
   public static boolean DEBUG_LOG = true;
   public static ArrayList<LOG_TYPE> LOG_FILTER = new ArrayList<>();
+  Lookup lookup = new Lookup();
   // </editor-fold>
 
   // <editor-fold defaultstate="collapsed" desc="Synced Action Storage Variables">
@@ -1294,7 +1295,8 @@ public class Game implements Runnable {
    */
   public void loadWorld() {
     world = new World(this);
-    DataLoader.loadSaveFile(this, new Lookup(), "resources/saves/Data.json");
+    lookup = new Lookup();
+    DataLoader.loadSaveFile(this, lookup, "resources/saves/Data.json");
   }
 
   /**

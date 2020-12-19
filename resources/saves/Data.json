@@ -737,6 +737,10 @@
       "data": [{"lookup": "outside"}]
     },
     {
+      "func": "loadFile",
+      "data": ["resources/saves/loadBus.json"]
+    },
+    {
       "func": "addRoom",
       "data": [
         {"lookup": "home_end"},
@@ -797,6 +801,7 @@
     },
     {
       "func": "addRoom",
+      "noclone": true,
       "data": [
         {"lookup": "school"},
         {
@@ -814,10 +819,6 @@
           "obj": "v"
         }
       ]
-    },
-    {
-      "func": "loadFile",
-      "data": ["resources/saves/loadBus.json"]
     },
     {
       "func": "loadFile",

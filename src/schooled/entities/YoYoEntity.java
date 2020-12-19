@@ -17,10 +17,12 @@ public class YoYoEntity extends ItemEntity {
 
   public YoYoEntity(Game g) {
     super(g);
+    setHoldable(true);
   }
 
   public YoYoEntity(YoYoEntity g) {
     super(g);
+    setHoldable(true);
   }
 
 

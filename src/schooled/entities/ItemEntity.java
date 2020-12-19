@@ -25,7 +25,9 @@ public class ItemEntity extends Entity {
 
   private boolean removeOnPickup = true; // remove the entity on pickup
   private boolean takeable = true; // is the item takeable
+  private boolean holdable = false;
   private Event pickupEvent = null; // event to preform when the item is picked
+
 
   /**
    * Create a blank item entity.
@@ -83,13 +85,15 @@ public class ItemEntity extends Entity {
         removeFromContainer();
       }
 
-      ((Player)basicEntity).items.add(this);
-      ArrayList<ItemEntity> held = ((Player)basicEntity).held;
+      if (holdable) {
+        ((Player) basicEntity).items.add(this);
+        ArrayList<ItemEntity> held = ((Player) basicEntity).held;
 
-      if(held.size() == 0) {
-        held.add(this);
-      } else if (held.size() == 1) {
-        held.add(this);
+        if (held.size() == 0) {
+          held.add(this);
+        } else if (held.size() == 1) {
+          held.add(this);
+        }
       }
 
       cancelCollision();
@@ -114,6 +118,14 @@ public class ItemEntity extends Entity {
    */
   public void setTakeable(boolean takeable) {
     this.takeable = takeable;
+  }
+
+  public boolean isHoldable() {
+    return holdable;
+  }
+
+  public void setHoldable(boolean holdable) {
+    this.holdable = holdable;
   }
 
   /**

@@ -4,10 +4,14 @@ function getPath(str,sep)
     return str:match("(.*"..sep..")")
 end
 
-SEPERATOR = "/"
+SEPARATOR = "/"
 SPR_PATH = app.activeSprite.filename
-SPR_DIR = getPath(SPR_PATH, SEPERATOR)
-RESOURCE_DIR = SPR_DIR:sub(1, SPR_DIR:find("resources") - 1).."resources"..SEPERATOR
+SPR_DIR = getPath(SPR_PATH, SEPARATOR)
+if SPR_DIR == nil then
+    SEPARATOR = "\\"
+    SPR_DIR = getPath(SPR_PATH, SEPARATOR)
+end
+RESOURCE_DIR = SPR_DIR:sub(1, SPR_DIR:find("resources") - 1).."resources"..SEPARATOR
 
-json = dofile(RESOURCE_DIR .. "aseprite_scripts" .. SEPERATOR .. "json.lua")
-dofile(RESOURCE_DIR .. "aseprite_scripts" .. SEPERATOR .. "extract_data.lua")
+json = dofile(RESOURCE_DIR .. "aseprite_scripts" .. SEPARATOR .. "json.lua")
+dofile(RESOURCE_DIR .. "aseprite_scripts" .. SEPARATOR .. "extract_data.lua")

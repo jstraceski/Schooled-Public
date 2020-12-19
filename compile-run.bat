@@ -1,2 +1,2 @@
-ant
-java -jar classes\artifacts\Schooled_jar\Schooled.jar
+call ant
+java -jar out\artifacts\Schooled_jar\Schooled.jar

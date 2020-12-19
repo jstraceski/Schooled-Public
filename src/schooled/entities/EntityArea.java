@@ -20,6 +20,7 @@ public class EntityArea extends Entity {
   private BiFunction<Entity, ArrayList<Manifold>, Boolean> func = null;
   private int turnCollisionOff = 0;
   private boolean playerOnly = false;
+  private boolean autoInteract = true;
 
   /**
    * A Constructor for an Entity Area.
@@ -36,6 +37,20 @@ public class EntityArea extends Entity {
     if (nFunction != null) {
       func = nFunction;
     }
+  }
+
+  public EntityArea setClone(EntityArea entity) {
+    super.setClone(entity);
+    entity.func = func;
+    entity.turnCollisionOff = turnCollisionOff;
+    entity.playerOnly = playerOnly;
+    entity.autoInteract = autoInteract;
+    return entity;
+  }
+
+  @Override
+  public Entity clone() {
+    return setClone(new EntityArea(this.getGame()));
   }
 
   public void setFunc(BiFunction<Entity, ArrayList<Manifold>, Boolean> func) {
@@ -67,7 +82,6 @@ public class EntityArea extends Entity {
 
   @Override
   public boolean collision(BasicEntity e, ArrayList<Manifold> m) {
-
     if (((e instanceof Player) || (!playerOnly && e instanceof Entity)) && !isParent(e)) {
       Event interactEvent = getInteractEvent();
       if (interactEvent != null) {

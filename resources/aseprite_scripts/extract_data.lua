@@ -25,12 +25,10 @@ function setup(spr)
 
 	boxesLookup = {}
 	boxesData = {}
-
-	SEPERATOR = "/"
 	SPR_PATH = spr.filename
-	SPR_NAME = getFileName(SPR_PATH, SEPERATOR)
-	SPR_DIR = getPath(SPR_PATH, SEPERATOR)
-	RESOURCE_DIR = SPR_DIR:sub(1, SPR_DIR:find("resources") - 1).."resources"..SEPERATOR
+	SPR_NAME = getFileName(SPR_PATH, SEPARATOR)
+	SPR_DIR = getPath(SPR_PATH, SEPARATOR)
+	RESOURCE_DIR = SPR_DIR:sub(1, SPR_DIR:find("resources") - 1).."resources"..SEPARATOR
 	RESOURCE_DIR_LIST = scandirs(RESOURCE_DIR)
 	JSON_FILE_LIST = scanJson(RESOURCE_DIR)
 end
@@ -134,7 +132,7 @@ end
 
 
 function scanJson(directory)
-		return dirHelper(directory, SEPERATOR .. "*.json\"")
+		return dirHelper(directory, SEPARATOR .. "*.json\"")
 end
 
 function getFileName(str,sep)
@@ -615,8 +613,8 @@ end
 
 
 function getJsonSprite(json_path, json_data, layer_data)
-	local data_path = getPath(json_path, SEPERATOR)
-	local json_spr_path = data_path .. SEPERATOR .. json_data["sheet"]
+	local data_path = getPath(json_path, SEPARATOR)
+	local json_spr_path = data_path .. SEPARATOR .. json_data["sheet"]
 	local active_spr = app.activeSprite
 
 	local i_data = json_data["images"]
@@ -719,7 +717,7 @@ function findSprite(spr_str, path, layer_data)
 
 
 	for idx, sub_path in ipairs(RESOURCE_DIR_LIST) do
-		a,b = findSpriteSub(spr_str, sub_path .. SEPERATOR, "-")
+		a,b = findSpriteSub(spr_str, sub_path .. SEPARATOR, "-")
 		if (a ~= nil and b ~= nil) then
 			return a,b
 		end
@@ -796,7 +794,7 @@ function findSpriteSub(tag, path, sep)
 
 	-- for i,sprite in ipairs(app.sprites) do
 		-- local spritePath = sprite.filename
-		-- local spriteName = getFileName(spritePath, SEPERATOR)
+		-- local spriteName = getFileName(spritePath, SEPARATOR)
 
 		-- lookup_tag = getSpriteData(sprite, tag, "lookup")
 
@@ -1511,7 +1509,7 @@ function finish(dlg, spr)
 
 	lNum = getLayerCount(spr)
 	fNum = #spr.frames
-	local swap = true;
+	local swap = false;
 
 
 	if (swap) then
@@ -1569,13 +1567,13 @@ function finish(dlg, spr)
 
 	fitSheetImage = Image(spr.width*wIdx, spr.height*hIdx)
 	fitSheetImage:drawImage(sheetImage,  Point(0, 0))
-	fitSheetImage:saveAs(SPR_DIR .. SEPERATOR .. SPR_NAME .. ".png")
+	fitSheetImage:saveAs(SPR_DIR .. SEPARATOR .. SPR_NAME .. ".png")
 
 	tData["sheet"] = SPR_NAME .. ".png"
 	tData = setData(tData, "entities", e_list)
 	tData = setData(tData, "walls", w_list)
 
-	writeToFile(SPR_DIR .. SEPERATOR .. SPR_NAME .. "-edata.json", toJson(tData))
+	writeToFile(SPR_DIR .. SEPARATOR .. SPR_NAME .. "-edata.json", toJson(tData))
 
 	restoreVisibility()
 
@@ -1595,7 +1593,7 @@ function searchSubfolders(path, prefix)
 
 	for n, folder in ipairs(scandir(path)) do
 		print(prefix .. folder)
-		searchSubfolders(path .. SEPERATOR .. folder, prefix .. "\t")
+		searchSubfolders(path .. SEPARATOR .. folder, prefix .. "\t")
 	end
 end
 
@@ -1654,7 +1652,6 @@ function addImage(spr, tag)
 		else
 			table.insert(p_out, json_format)
 		end
-
 		count = count + 1
 	end
 

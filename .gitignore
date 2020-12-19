@@ -1,2 +1,9 @@
-classes/**
+*.class
+*.log
+*.xlsx
+build/*
+Schooled.iml
+*.xlsx
+.idea/workspace.xml
+.idea
 classes

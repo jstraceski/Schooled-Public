@@ -4,11 +4,17 @@
       "lookup": "bus_entity",
       "data": [
         {
-          "data": [572.5, 605],
+          "data": [
+            572.5,
+            605
+          ],
           "obj": "vector"
         },
         {
-          "data": [0, 0],
+          "data": [
+            0,
+            0
+          ],
           "obj": "polygon"
         },
         12000
@@ -37,11 +43,17 @@
       "visible": false,
       "data": [
         {
-          "data": [-6.5, -21],
+          "data": [
+            -6.5,
+            -21
+          ],
           "obj": "vector"
         },
         {
-          "data": [10, 8],
+          "data": [
+            10,
+            8
+          ],
           "obj": "polygon"
         },
         0,
@@ -54,15 +66,24 @@
       "data": [
         {"lookup": "bus_seat"},
         {
-          "data": [0, -1],
+          "data": [
+            0,
+            -1
+          ],
           "obj": "v"
         },
         {
-          "data": [1, 0],
+          "data": [
+            1,
+            0
+          ],
           "obj": "v"
         },
         {
-          "data": [-1, 0],
+          "data": [
+            -1,
+            0
+          ],
           "obj": "v"
         }
       ]
@@ -76,9 +97,7 @@
     },
     {
       "lookup": "exhaust",
-      "data": [
-        {"lookup": "cloud_stream_left"}
-      ],
+      "data": [{"lookup": "cloud_stream_left"}],
       "obj": "entity"
     },
     {
@@ -93,7 +112,10 @@
       "data": [
         {"lookup": "exhaust"},
         {
-          "data": [-99, 8],
+          "data": [
+            -99,
+            8
+          ],
           "obj": "vector"
         }
       ]
@@ -113,7 +135,10 @@
           "func": "childOffset",
           "data": [
             {"lookup": "bus_seat"},
-            [-0.5, -0.25]
+            [
+              -0.5,
+              -0.25
+            ]
           ]
         }
       ],
@@ -127,7 +152,10 @@
           "func": "shiftPos",
           "data": [
             {"lookup": "bus_entity"},
-            [0.5, 0.25]
+            [
+              0.5,
+              0.25
+            ]
           ]
         }
       ],
@@ -141,7 +169,10 @@
           "func": "childOffset",
           "data": [
             {"lookup": "bus_seat"},
-            [0.5, -0.15]
+            [
+              0.5,
+              -0.15
+            ]
           ]
         }
       ],
@@ -155,7 +186,10 @@
           "func": "shiftPos",
           "data": [
             {"lookup": "bus_entity"},
-            [-1, -0.1]
+            [
+              -1,
+              -0.1
+            ]
           ]
         }
       ],
@@ -169,7 +203,10 @@
           "func": "childOffset",
           "data": [
             {"lookup": "bus_seat"},
-            [0, 0]
+            [
+              0,
+              0
+            ]
           ]
         }
       ],
@@ -183,7 +220,10 @@
           "func": "shiftPos",
           "data": [
             {"lookup": "bus_entity"},
-            [0.5, -0.15]
+            [
+              0.5,
+              -0.15
+            ]
           ]
         }
       ],
@@ -210,7 +250,10 @@
           "data": [
             {"lookup": "bus_entity"},
             {
-              "data": [500, 0],
+              "data": [
+                500,
+                0
+              ],
               "obj": "v"
             }
           ]
@@ -227,7 +270,10 @@
           "data": [
             {"lookup": "bus_entity"},
             {
-              "data": [0, 0],
+              "data": [
+                0,
+                0
+              ],
               "obj": "v"
             }
           ]
@@ -244,7 +290,10 @@
           "data": [
             {"lookup": "bus_entity"},
             {
-              "data": [2.5, 0],
+              "data": [
+                2.5,
+                0
+              ],
               "obj": "v"
             }
           ]
@@ -286,7 +335,10 @@
           "data": [
             {"lookup": "bus_entity"},
             {
-              "data": [0, 0],
+              "data": [
+                0,
+                0
+              ],
               "obj": "v"
             }
           ]
@@ -315,13 +367,11 @@
         {"lookup": "stop1"},
         {"lookup": "stop2"},
         {
-          "data": [
-            {
-              "lookup": "inSchool",
-              "data": [true],
-              "obj": "boolean"
-            }
-          ],
+          "data": [{
+            "lookup": "inSchool",
+            "data": [true],
+            "obj": "boolean"
+          }],
           "obj": "cmd"
         }
       ],
@@ -371,15 +421,13 @@
     },
     {
       "lookup": "stop_loop",
-      "data": [
-        {
-          "func": "setCollision",
-          "data": [
-            {"lookup": "home_outside_right_enter"},
-            false
-          ]
-        }
-      ],
+      "data": [{
+        "func": "setCollision",
+        "data": [
+          {"lookup": "home_outside_right_enter"},
+          false
+        ]
+      }],
       "obj": "event"
     },
     {
@@ -387,9 +435,7 @@
       "data": [
         [
           {
-            "data": [
-              {"lookup": "bus_entity"}
-            ],
+            "data": [{"lookup": "bus_entity"}],
             "obj": "state"
           },
           {
@@ -402,12 +448,10 @@
         {
           "data": [
             {
-              "data": [
-                {
-                  "func": "print",
-                  "data": ["true"]
-                }
-              ],
+              "data": [{
+                "func": "print",
+                "data": ["true"]
+              }],
               "obj": "cmd"
             },
             {"lookup": "shake"},
@@ -418,14 +462,10 @@
           "obj": "event"
         },
         {
-          "data": [
-            {
-              "func": "print",
-              "data": [
-                {"lookup": "inSchool"}
-              ]
-            }
-          ],
+          "data": [{
+            "func": "print",
+            "data": [{"lookup": "inSchool"}]
+          }],
           "obj": "cmd"
         }
       ],

@@ -6,12 +6,12 @@
       "obj": "sound"
     },
     {
-      "data": ["Watch closely, and never stop."],
-      "hCenter": true,
-      "vCenter": true,
-      "obj": "menu_entity",
       "lookup": "startText",
-      "color": 16777215
+      "hCenter": true,
+      "data": ["Watch closely, and never stop."],
+      "color": 16777215,
+      "obj": "menu_entity",
+      "vCenter": true
     },
     {
       "lookup": "startSeq",
@@ -97,7 +97,7 @@
     },
     {
       "func": "nomenu",
-      "data": [false]
+      "data": [true]
     },
     {
       "func": "startEvent",
@@ -133,11 +133,17 @@
     },
     {
       "func": "setState",
-      "data": [{"lookup": "bedroom_bed"}, "No_Pillow"]
+      "data": [
+        {"lookup": "bedroom_bed"},
+        "No_Pillow"
+      ]
     },
     {
       "func": "addChild",
-      "data": [{"lookup": "bedroom_bed"}, {"lookup": "player"}]
+      "data": [
+        {"lookup": "bedroom_bed"},
+        {"lookup": "player_"}
+      ]
     },
     {
       "func": "sprite",
